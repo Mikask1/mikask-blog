@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/mikask-blog/static/css/main.bf90992f.css",
-    "main.js": "/mikask-blog/static/js/main.89942c01.js",
+    "main.js": "/mikask-blog/static/js/main.d19d73aa.js",
     "static/js/787.271721f0.chunk.js": "/mikask-blog/static/js/787.271721f0.chunk.js",
     "static/media/photo.png": "/mikask-blog/static/media/photo.20c411152445c32298cb.png",
     "static/media/potrait.png": "/mikask-blog/static/media/potrait.566fdc7fdfe9b7671fcb.png",
     "index.html": "/mikask-blog/index.html",
     "main.bf90992f.css.map": "/mikask-blog/static/css/main.bf90992f.css.map",
-    "main.89942c01.js.map": "/mikask-blog/static/js/main.89942c01.js.map",
+    "main.d19d73aa.js.map": "/mikask-blog/static/js/main.d19d73aa.js.map",
     "787.271721f0.chunk.js.map": "/mikask-blog/static/js/787.271721f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bf90992f.css",
-    "static/js/main.89942c01.js"
+    "static/js/main.d19d73aa.js"
   ]
 }
