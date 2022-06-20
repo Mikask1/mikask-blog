@@ -1,2 +1,2 @@
 # mikask-blog
-My personal blog website
+My personal portofolio website
