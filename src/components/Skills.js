@@ -10,7 +10,7 @@ const Skills = () => {
     }, [])
     return (
         <div className='text-justify w-11/12 z-0'>
-            <p data-aos="fade-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi tempore nisi dolor numquam earum explicabo optio iure fuga aliquid asperiores quae laboriosam harum, tempora ex nemo iste molestiae voluptate eveniet quibusdam unde aperiam id alias ipsa! Similique natus veritatis cumque quisquam dolor? Accusantium reprehenderit praesentium blanditiis beatae officiis impedit eveniet!</p>
+            <p data-aos="fade-right">Below are my personal assesment on my skill level on a couple of programming languages, software, and frameworks. I rate them in comparison to my other skills and see how confident I am in each topic. You can think of this assesment as a ranking system rather than precise analysis. You can play with the slider if you want to aswell. This is by design since it's harder than it being non-editable.</p>
             <ProgressGrid />
         </div>
     )
@@ -20,7 +20,7 @@ const ProgressGrid = () => {
     return (
         <div className='progress-grid grid grid-cols-2 pt-10'>
             <ProgressBar text='Photoshop' color='#5CD0FA' value="18" dataAos="slide-right"><PSIcon/></ProgressBar>
-            <ProgressBar text='HTML5' color='#E34C26' value="69" dataAos="slide-left" data-aos-delay="1000"><HTMLIcon/></ProgressBar>
+            <ProgressBar text='HTML5' color='#E34C26' value="68" dataAos="slide-left" data-aos-delay="1000"><HTMLIcon/></ProgressBar>
             <ProgressBar text='CSS3' color='#264DE4' value="31" dataAos="slide-right" ><CSSIcon /></ProgressBar>
             <ProgressBar text='TailwindCSS' color='#06b6d4' value="14" dataAos="slide-left" data-aos-delay="1000"><TailwindIcon /></ProgressBar>
             <ProgressBar text='JavaScript' color='#F0DB4F' value="42" dataAos="slide-right"><JSIcon /></ProgressBar>

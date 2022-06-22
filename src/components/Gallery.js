@@ -1,4 +1,5 @@
 import Photo from '../resources/photo.png';
+import Potrait from '../resources/potrait.png';
 
 import Aos from "aos"
 import { useEffect } from "react"
@@ -15,7 +16,8 @@ const Gallery = () => {
                 <p className='quicksand'>Student at Sepuluh Nopember Institute of Technology</p>
                 <button className='cv-button'>DOWNLOAD CV</button>
             </section>
-            <img id='gallery-photo' alt='Big Photo of Darren Prasetya' src={Photo} />
+            <img id='gallery-photo' alt='Darren Prasetya Potrait' src={Photo} />
+            <img id='potrait-gallery' className='potrait object-center' alt='potrait' src={Potrait} />
         </div>
     )
 }

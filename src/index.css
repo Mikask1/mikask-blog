@@ -12,19 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-#navbar::-webkit-scrollbar {
-  width: 8px;
-}
-
-#navbar::-webkit-scrollbar-track {
-  background-color: lightgrey;
-}
-
-#navbar::-webkit-scrollbar-thumb {
-  background-color: gray;
-  border-radius: 4px;
-}
-
 svg {
   display: inline-block;
 }
@@ -43,12 +30,24 @@ svg {
   background-color: #f2f3f7;
   text-align: center;
   overflow-y: scroll;
-  height: 101%;
+  height: 100vh;
 
-  margin-top: -8vh;
+  margin-top: -3rem;
   border-left: 1rem solid #262626;
 }
 
+#navbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+#navbar::-webkit-scrollbar-track {
+  background-color: lightgrey;
+}
+
+#navbar::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 4px;
+}
 
 .nav-style {
   font-size: 0.75rem;
@@ -58,6 +57,8 @@ svg {
 .nav-menu {
   list-style-type: none;
   margin-top: 8.5vh;
+  padding-bottom: 8vh;
+  margin-bottom: 5vh;
 }
 
 .nav-menu li {
@@ -93,7 +94,7 @@ svg {
   border-bottom: 1px solid var(--secondary-color);
 }
 
-#potrait {
+.potrait {
   border-radius: 50%;
   width: calc(var(--width)*0.45);
   height: auto;
@@ -115,11 +116,9 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
   border-top: 0.25rem solid black;
   border-bottom: 0.25rem solid black;
   background-color: #f2f3f7;
-  width: 100%;
   height: auto;
   margin-top: 3rem;
   box-shadow: 5px 2px 4px 2px #888888;
@@ -148,6 +147,10 @@ svg {
   padding-top: 30px;
   padding-bottom: 30px;
   padding-right: 10px;
+}
+
+#potrait-gallery{
+  display: none;
 }
 
 .cv-button {
@@ -207,18 +210,23 @@ svg {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  width: 71vw;
+}
+.rect {
+  min-height: 15vw;
+  background: rgba(209, 213, 219, 0.1);
 }
 
+.counter-count{
+  font-size: 6vh;
+}
+
+.counter-detail {
+  font-size: 2.5vh;
+}
 .about-me {
   letter-spacing: 5px;
 }
 
-.rect {
-  min-height: 18vw;
-  width: 100%;
-  background: rgba(209, 213, 219, 0.1);
-}
 
 .progress-bar {
   -webkit-appearance: none;
@@ -289,6 +297,7 @@ svg {
 .dropdown-container {
   border: 1px solid rgb(220, 220, 220);
   transition: all 500ms ease;
+  cursor: pointer;
 }
 
 .dropdown-paragraph {
@@ -380,27 +389,52 @@ svg {
   transform: translateY(0);
 }
 
+.flip-h{
+  transform: scaleY(-1);
+}
+
 @media screen and (max-width: 1000px) {
-  #navbar {
-    display: none;
+  html, body{
+    overflow-x: hidden;
   }
 
+  .gallery-text p {
+    font-size: 2vw;
+  }
+  
+  #navbar {
+    display: none;
+    width: 100%;
+  }
+  
   .content {
     margin-left: 1.5rem;
   }
 
   .gallery {
     width: 100vw;
+    margin-left: -1.5rem;
+    padding-left: 0;
+    box-shadow: none;
+    align-items: flex-start;
+    border: none;
   }
 
   #gallery-photo {
     display: none;
   }
 
-  .container {
-    max-width: 800px;
+  #potrait-gallery{
+    display: block;
+    width: 35vw;
+    height: auto;
     margin: 0;
-    width: 95%;
+    margin-top: 2.5rem;
+    margin-right: 1rem;
+  }
+
+  .container {
+    display: none;
   }
 
   .progress-bar {
@@ -427,5 +461,55 @@ svg {
     padding-top: 1rem;
     padding-bottom: 1rem;
     border: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cv-button{
+    font-size: 0.6rem;
+    min-height: 0.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 1000px) {
+  .gallery{
+    align-items: center;
+  }
+
+  #potrait-gallery{
+    margin-top: 0;
+  }
+  
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  #potrait-gallery {
+    width: 28vw;
+    height: auto;
+  }
+
+  .progress-bar {
+    width: 75vw;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  #potrait-gallery {
+    width: 20vw;
+    height: auto;
+  }
+
+  .progress-bar {
+    width: 78vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery-text p {
+    font-size: 2.5vw;
   }
 }

@@ -8,8 +8,8 @@ const Window = () => {
         Aos.init({ duration: 800 })
     }, [])
     return (
-        <div className='container relative -ml-6 mt-20' data-aos="slide-up">
-            <div className='rect flex justify-between items-baseline bg-gray-30 text-white'>
+        <div className='container -ml-6 mt-20'>
+            <div className='rect flex justify-between items-center bg-gray-30 text-white'>
                 <Counter count='9' detail='Small Projects' />
                 <Counter count='0' detail='Clients' />
                 <Counter count='0' detail='Partners' />
@@ -21,9 +21,9 @@ const Window = () => {
 
 const Counter = (props) => {
     return (
-        <span className='p-10 pt-20 text-center'>
-            <p className='quicksand font-sans text-5xl' >{props.count}</p>
-            <p className='detail font-mono uppercase tracking-widest mt-2'>{props.detail}</p>
+        <span className='p-10 text-center'>
+            <p className='counter-count quicksand font-sans' >{props.count}</p>
+            <p className='counter-detail font-mono uppercase tracking-widest mt-2'>{props.detail}</p>
         </span>
     )
 }

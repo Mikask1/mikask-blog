@@ -10,7 +10,7 @@ const NavBar = () => {
     }
     return (
         <section id='navbar' className='z-50'>
-            <img id='potrait' className='object-center' alt='potrait' src={Potrait} />
+            <img className='potrait object-center' alt='potrait' src={Potrait} />
 
             <h1 id='name' className='playfair'>Darren Prasetya</h1>
 

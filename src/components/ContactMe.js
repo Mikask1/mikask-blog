@@ -1,9 +1,12 @@
 import { useRef, useEffect } from "react";
-import {GmailIcon, PhoneIcon, DiscordIcon, InstagramIcon} from "./Icons.js"
 
 import Aos from "aos"
 
-function ContactMe(){
+import { GmailIcon, PhoneIcon, DiscordIcon, InstagramIcon } from "./Icons.js"
+import { database } from "../index.js";
+import { ref, set, push } from "firebase/database";
+
+function ContactMe() {
     useEffect(() => {
         Aos.init({ duration: 800 })
     }, [])
@@ -15,20 +18,29 @@ function ContactMe(){
 
     function handleSubmit(event) {
         event.preventDefault();
+
         const name = event.target.name.value;
         const email = event.target.email.value;
         const subject = event.target.subject.value;
         const message = event.target.message.value;
-        
+        const responseID = email.replace(/[\W_]+/g, "")
+
         nameRef.current.value = ""
         emailRef.current.value = ""
         subjectRef.current.value = ""
         messageRef.current.value = ""
+        
+        const reference = ref(database, responseID)
 
-        console.log(`Email: ${email}\nMy name is ${name}, on the subject of ${subject}, here's my message.\nDear Darren, ${message}`)
+        set(push(reference), {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
+        });
     }
 
-    return(
+    return (
         <div className="contact-grid grid grid-cols-2 w-11/12">
             <div className="contact-form quicksand">
                 <form id="contact-form" onSubmit={handleSubmit}>
@@ -39,7 +51,7 @@ function ContactMe(){
                     <button data-aos="slide-up" className="submit uppercase text-sm ml-1" type="submit">send message</button>
                 </form>
             </div>
-            
+
             <div className="contact-details ml-12 pl-8">
                 <DetailIcon icon={DiscordIcon}>
                     <a href="https://discordapp.com/users/605683392926842911" target="_blank" rel='noreferrer noopener nofollow'>Mikask#8368</a>
@@ -52,17 +64,17 @@ function ContactMe(){
                     +62 89502162757
                 </DetailIcon>
                 <DetailIcon icon={InstagramIcon}>
-                    <a href="https://www.instagram.com/mikask123" target= "_blank" rel='noreferrer noopener nofollow'>mikask123</a>
+                    <a href="https://www.instagram.com/mikask123" target="_blank" rel='noreferrer noopener nofollow'>mikask123</a>
                 </DetailIcon>
             </div>
         </div>
-    )    
+    )
 }
 
-const DetailIcon = (props) =>{
-    return(
+const DetailIcon = (props) => {
+    return (
         <div className="flex align-middle mb-5" data-aos="slide-up">
-            {<props.icon className="inline-block"/>}
+            {<props.icon className="inline-block" />}
             <p className="inline-block ml-3">{props.children}</p>
         </div>
     )
