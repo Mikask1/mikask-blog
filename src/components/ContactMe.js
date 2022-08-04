@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
 
 import Aos from "aos"
 
@@ -16,29 +16,32 @@ function ContactMe() {
     const subjectRef = useRef()
     const messageRef = useRef()
 
-    function handleSubmit(event) {
+    const handleSubmit = useCallback(
+      (event) => {
         event.preventDefault();
-
+  
         const name = event.target.name.value;
         const email = event.target.email.value;
         const subject = event.target.subject.value;
         const message = event.target.message.value;
         const responseID = email.replace(/[\W_]+/g, "")
-
+  
         nameRef.current.value = ""
         emailRef.current.value = ""
         subjectRef.current.value = ""
         messageRef.current.value = ""
         
         const reference = ref(database, responseID)
-
+  
         set(push(reference), {
             name: name,
             email: email,
             subject: subject,
             message: message
-        });
-    }
+        })
+      },[]
+    )
+    
 
     return (
         <div className="contact-grid grid grid-cols-2 w-11/12">
@@ -48,7 +51,7 @@ function ContactMe() {
                     <input data-aos="slide-up" ref={emailRef} name="email" className="bg-slate-200 w-full ml-1 mr-5 h-12 pl-5 mt-0 mb-4 opacity-90" placeholder="Email" type="email" ></input>
                     <input data-aos="slide-up" ref={subjectRef} name="subject" className="bg-slate-200 w-full ml-1 mr-5 h-12 pl-5 mt-0 mb-4 opacity-90" placeholder="Subject" type="text" ></input>
                     <textarea data-aos="slide-up" ref={messageRef} name="message" className="bg-slate-200 w-full ml-1 mr-5 h-36 pt-2 pb-2 pr-5 pl-5 mt-0 mb-4 opacity-90" placeholder="Message" rows={4} cols={50}></textarea>
-                    <button data-aos="slide-up" className="submit uppercase text-sm ml-1" type="submit">send message</button>
+                    <button data-aos="fade" data-aos-offset={-10} data-aos-duration={1500} className="submit uppercase text-sm ml-1" type="submit">send message</button>
                 </form>
             </div>
 

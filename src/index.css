@@ -235,13 +235,13 @@ svg {
   height: 5px;
   border-radius: 8px;
   outline: none;
-  opacity: 0.7;
-  cursor: pointer;
+  opacity: 0.8;
+  cursor: default;
 }
 
-.progress-bar:hover {
+/* .progress-bar:hover {
   opacity: 1;
-}
+} */
 
 .progress-bar::-webkit-slider-runnable-track {
   -webkit-appearance: none;
@@ -255,7 +255,7 @@ svg {
   width: 10px;
   background-color: white;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: default;
   overflow: visible;
   border: 1px solid lightgrey;
 }
@@ -267,7 +267,7 @@ svg {
   width: 10px;
   background-color: white;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: default;
   overflow: visible;
   border: 1px solid lightgrey;
 }
@@ -279,7 +279,7 @@ svg {
   width: 10px;
   background-color: white;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: default;
   overflow: visible;
   border: 1px solid lightgrey;
 }
@@ -439,6 +439,10 @@ svg {
 
   .progress-bar {
     width: 60vw;
+  }
+
+  .progress-bar:hover {
+    pointer-events: none;
   }
 
   .progress-grid{

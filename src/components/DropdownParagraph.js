@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 import { CSSTransition } from 'react-transition-group';
 import Aos from "aos"
@@ -13,11 +13,13 @@ function DropdownMenu(props) {
     const [open, setOpen] = useState(false)
     const containerRef = useRef(null)
 
-    const openDropdown = () =>{
+    const openDropdown = useCallback(
+      () => {
         setOpen(!open);
         containerRef.current.style.backgroundColor = open ? "rgb(241, 245, 249)" : "#2c98f0"
         containerRef.current.style.color = open ? "black" : "white"
-    }
+      }, [open]
+    )
 
     return (
         <section>
