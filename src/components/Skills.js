@@ -23,9 +23,9 @@ const ProgressGrid = () => {
             <ProgressBar text='Photoshop' color='#5CD0FA' value="18" dataAos="slide-right"><PSIcon/></ProgressBar>
             <ProgressBar text='HTML5' color='#E34C26' value="81" dataAos="slide-left" data-aos-delay="1000"><HTMLIcon/></ProgressBar>
             <ProgressBar text='CSS3' color='#264DE4' value="31" dataAos="slide-right" ><CSSIcon /></ProgressBar>
-            <ProgressBar text='TailwindCSS' color='#06b6d4' value="41" dataAos="slide-left" data-aos-delay="1000"><TailwindIcon /></ProgressBar>
-            <ProgressBar text='JavaScript' color='#F0DB4F' value="42" dataAos="slide-right"><JSIcon /></ProgressBar>
-            <ProgressBar text='ReactJS' color='#61DBFB' value="14" dataAos="slide-left" data-aos-delay="1000"><ReactIcon /></ProgressBar>
+            <ProgressBar text='TailwindCSS' color='#06b6d4' value="46" dataAos="slide-left" data-aos-delay="1000"><TailwindIcon /></ProgressBar>
+            <ProgressBar text='JavaScript' color='#F0DB4F' value="41" dataAos="slide-right"><JSIcon /></ProgressBar>
+            <ProgressBar text='ReactJS' color='#61DBFB' value="43" dataAos="slide-left" data-aos-delay="1000"><ReactIcon /></ProgressBar>
             <ProgressBar text='Python' color='#FFD43B' value="58" dataAos="slide-right"><PythonIcon /></ProgressBar>
             <ProgressBar text='C' color='#6f82e9' value="15" dataAos="slide-left" data-aos-delay="1000"><CIcon /></ProgressBar>
             <ProgressBar text='Google' color='#4285F4' value="98" dataAos="slide-right"><GoogleIcon/></ProgressBar>
