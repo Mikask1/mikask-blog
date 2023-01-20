@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 import { getDatabase } from "firebase/database";
-import * as config from "./config.js"
+import config from "./config.js"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const firebaseConfig = {

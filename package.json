@@ -2,7 +2,7 @@
   "name": "portofolio-blog",
   "version": "1.0.0",
   "private": true,
-  "homepage": "http://mikask1.github.io/mikask-blog",
+  "homepage": "https://blog.mikask.site",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
