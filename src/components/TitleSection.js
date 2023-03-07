@@ -3,7 +3,7 @@ import { useEffect } from "react"
 
 const TitleSection = (props) => {
     useEffect(() => {
-        Aos.init({ duration: 800, offset: 0, delay: 100})
+        Aos.init({ duration: 800, offset: 0, delay: 100 })
     }, [])
     return (
         <div>

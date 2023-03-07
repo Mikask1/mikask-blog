@@ -1,11 +1,11 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 
 import './index.css';
 
 import Gallery from "./components/Gallery.js"
 import NavBar from "./components/NavBar.js"
 import TitleSection from "./components/TitleSection.js"
-import {GitHub, Window} from "./components/GitHub.js"
+import { GitHub, Window } from "./components/GitHub.js"
 import Skills from "./components/Skills.js"
 import DropdownMenu from "./components/DropdownParagraph.js"
 import ContactMe from './components/ContactMe.js';
@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <NavBar />
       <section className='content'>
-        <Gallery/>
+        <Gallery />
 
         <section id='about-me'>
           <TitleSection subtitle='ABOUT ME' title='WHO AM I?'>
@@ -27,8 +27,8 @@ function App() {
         </section>
 
         <section id='github'>
-          <GitHub/>
-          <Window/>
+          <GitHub />
+          <Window />
         </section>
 
         <section id='skills'>
@@ -56,7 +56,7 @@ function App() {
           </TitleSection>
         </section>
 
-       <section id="work-experience">
+        <section id="work-experience">
           <TitleSection title="work experience" subtitle="experience">
             <DropdownMenu text="Intern at ICHIRO ITS (2022)">
               ICHIRO ITS is a highly skillfull robotics team, boasting the most achievements and accolades among other robotics team in ITS university. It is one of the best university robotics team in Indonesia. Unfortunately, I resigned my rights from being a permanent member as I learned that I didn't have much interest in robotics during the internship, and would like to focus more on other branches of programming.
@@ -66,7 +66,7 @@ function App() {
 
         <section id='contact-me'>
           <TitleSection title="contact me" subtitle="let's get in touch">
-            <ContactMe/>
+            <ContactMe />
           </TitleSection>
         </section>
 
@@ -83,8 +83,8 @@ const AboutMe = () => {
   return (
     <div className="text-justify w-11/12 z-0" data-aos="fade-right">
       <p id='hello' className='font-semibold'>
-        Hi, I'm Darren Prasetya. 
-        <span className='font-normal ml-1'> 
+        Hi, I'm Darren Prasetya.
+        <span className='font-normal ml-1'>
           Born in 2004. I came to love the art of programming at Highscool.I am currently an undergraduate student at Sepuluh Nopember Intitute of Technology.I take the Computer Science major as I am fascinated by how modern gadgets, specifically programming, have become so integrated in our lives and I want to be a part of that. For my education, I have maintained a 3.8 GPA so far, aswell as finishing a couple of small fun side projects to explore and learn more about programming. I am goal-oriented, responsible, and driven person. While I don't have any work experience, I am always excited to learn.
         </span>
       </p>

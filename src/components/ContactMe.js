@@ -17,31 +17,31 @@ function ContactMe() {
     const messageRef = useRef()
 
     const handleSubmit = useCallback(
-      (event) => {
-        event.preventDefault();
-  
-        const name = event.target.name.value;
-        const email = event.target.email.value;
-        const subject = event.target.subject.value;
-        const message = event.target.message.value;
-        const responseID = email.replace(/[\W_]+/g, "")
-  
-        nameRef.current.value = ""
-        emailRef.current.value = ""
-        subjectRef.current.value = ""
-        messageRef.current.value = ""
-        
-        const reference = ref(database, responseID)
-  
-        set(push(reference), {
-            name: name,
-            email: email,
-            subject: subject,
-            message: message
-        })
-      },[]
+        (event) => {
+            event.preventDefault();
+
+            const name = event.target.name.value;
+            const email = event.target.email.value;
+            const subject = event.target.subject.value;
+            const message = event.target.message.value;
+            const responseID = email.replace(/[\W_]+/g, "")
+
+            nameRef.current.value = ""
+            emailRef.current.value = ""
+            subjectRef.current.value = ""
+            messageRef.current.value = ""
+
+            const reference = ref(database, responseID)
+
+            set(push(reference), {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            })
+        }, []
     )
-    
+
 
     return (
         <div className="contact-grid grid grid-cols-2 w-11/12">

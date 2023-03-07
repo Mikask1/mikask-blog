@@ -1,4 +1,4 @@
-import {GitHubIcon} from "./Icons.js"
+import { GitHubIcon } from "./Icons.js"
 
 import Aos from "aos"
 import { useEffect } from "react"
@@ -31,7 +31,7 @@ const Counter = (props) => {
 
 const GitHub = () => {
     useEffect(() => {
-        Aos.init({ duration: 500})
+        Aos.init({ duration: 500 })
     }, [])
     return (
         <div className='bg-yellow-500 p-8 mt-52 w-11/12 rounded-md' data-aos="slide-up">
@@ -49,4 +49,4 @@ const GitHub = () => {
 }
 
 
-export {GitHub, Window}
+export { GitHub, Window }

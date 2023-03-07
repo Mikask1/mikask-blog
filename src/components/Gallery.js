@@ -6,7 +6,7 @@ import { useEffect } from "react"
 
 const Gallery = () => {
     useEffect(() => {
-        Aos.init({ duration: 1500})
+        Aos.init({ duration: 1500 })
     }, [])
     return (
         <div className='gallery' id='home' data-aos="fade">
